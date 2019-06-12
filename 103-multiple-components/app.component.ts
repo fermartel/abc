@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <payroll-search></payroll-search>
     <hr-files-search></hr-files-search>
+    <party-time-search></party-time-search>
   `
 })
 export class AppComponent {}

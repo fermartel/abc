@@ -34,7 +34,6 @@ export class AppComponent {
   }
 
   iAlwaysMove() {
-    console.log(1);
     this.top =
       Math.floor(Math.random() * (window.innerHeight - 100)) + 10;
     this.left =

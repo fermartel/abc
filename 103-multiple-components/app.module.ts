@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HrFilesSearchComponent } from './hr-files/hr-files-search.component';
-import { PartyTimeSearchComponent } from './party-time-search/party-time-search.component';
+import { PartyTimeSearchComponent } from './party-time/party-time-search.component';
 import { PayrollSearchComponent } from './payroll/payroll-search.component';
 import { SearchBoxComponent } from './search/search-box.component';
 

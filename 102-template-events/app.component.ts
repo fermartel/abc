@@ -7,6 +7,8 @@ import { scheduleMap } from './app.constants';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+  top = 500;
+  left = 500;
   name = 'John Doe';
   message = 'Please Clock In';
   currentSchedule = 'Hover to see selected work times';
@@ -29,5 +31,13 @@ export class AppComponent {
 
   clearSchedule() {
     this.currentSchedule = 'Hover to see selected work times';
+  }
+
+  iAlwaysMove() {
+    console.log(1);
+    this.top =
+      Math.floor(Math.random() * (window.innerHeight - 100)) + 10;
+    this.left =
+      Math.floor(Math.random() * (window.innerWidth - 100)) + 10;
   }
 }

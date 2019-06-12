@@ -1,0 +1,12 @@
+SKIP-*
+AOT-*
+.vscode
+demo-data
+tsconfig.*
+dist
+minimal_lib
+angular.json
+.angular-cli.json
+package.json
+tslint*.json
+polyfills.ts

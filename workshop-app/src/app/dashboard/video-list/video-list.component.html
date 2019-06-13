@@ -3,32 +3,10 @@
     <li
       class="collection-item videos"
       [class.selected]="selectedVideo === video"
-      *ngFor="let video of videoList"
-      (click)="selectVideo(video)"
+      *ngFor="let video of videos"
+      (click)="videoSelected.emit(video)"
     >
-      <span
-        ><b>{{ video.title }}</b> by <b>{{ video.author }}</b> ({{
-          video.id
-        }})</span
-      >
-      <ul class="collection">
-        <li
-          class="collection-item"
-          *ngFor="let details of video.viewDetails"
-        >
-          <ul class="collection">
-            <li class="collection-item">
-              <span><b>Age:</b> {{ details.age }}</span>
-            </li>
-            <li class="collection-item">
-              <span><b>Region:</b> {{ details.region }}</span>
-            </li>
-            <li class="collection-item">
-              <span><b>Date:</b> {{ details.date }}</span>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <app-video [video]="video"></app-video>
     </li>
   </ul>
 </div>

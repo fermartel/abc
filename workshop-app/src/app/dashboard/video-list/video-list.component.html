@@ -1,6 +1,11 @@
 <div class="card-content">
-  <ul class="collectionn" style="background-color:rgb(50, 145, 201);">
-    <li class="collection-item" *ngFor="let video of videoList">
+  <ul class="collection">
+    <li
+      class="collection-item videos"
+      [class.selected]="selectedVideo === video"
+      *ngFor="let video of videoList"
+      (click)="selectVideo(video)"
+    >
       <span
         ><b>{{ video.title }}</b> by <b>{{ video.author }}</b> ({{
           video.id

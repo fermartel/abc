@@ -1,12 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Video {
+  title: string;
+  author: string;
+  id: string;
+  viewDetails: ViewDetails[];
+}
+
+interface ViewDetails {
+  age: number;
+  region: string;
+  date: string;
+}
+
 @Component({
   selector: 'app-video-list',
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.css']
 })
 export class VideoListComponent implements OnInit {
-  videoList = [
+  selectedVideo?: Video;
+  videoList: Video[] = [
     {
       title: 'Angular Observable Data Flow',
       author: 'Kyle Cordes',
@@ -197,4 +211,12 @@ export class VideoListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  selectVideo(video: Video) {
+    if (this.selectedVideo === video) {
+      this.selectedVideo = undefined;
+    } else {
+      this.selectedVideo = video;
+    }
+  }
 }

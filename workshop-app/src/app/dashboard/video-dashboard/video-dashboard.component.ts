@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from '../../models/video';
+
 import { HttpClient } from '@angular/common/http';
 
 const apiUrl = 'https://api.angularbootcamp.com';

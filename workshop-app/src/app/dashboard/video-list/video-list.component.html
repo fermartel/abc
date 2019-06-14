@@ -4,7 +4,11 @@
       class="collection-item videos"
       [class.selected]="selectedVideo === video"
       *ngFor="let video of videos"
+<<<<<<< HEAD
       (click)="videoSelected.emit(video)"
+=======
+      (click)="selectVideo(video)"
+>>>>>>> 216dfc7f596ac7252e1f18e15347a2fa0c5624f6
     >
       <app-video [video]="video"></app-video>
     </li>
